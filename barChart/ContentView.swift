@@ -8,14 +8,23 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct BarChart: View {
     var body: some View {
-        Text("Hello, World!")
+        HStack{
+            Text("Hello, World!")
+            Button(action: {
+                print("TESTE")
+            }) {
+                 Text("Botão")
+            }
+        
+        }
+        
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct BarChart_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        BarChart()
     }
 }
