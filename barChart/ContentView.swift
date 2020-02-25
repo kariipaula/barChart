@@ -10,15 +10,45 @@ import SwiftUI
 
 struct BarChart: View {
     var body: some View {
-        HStack{
-            Text("Hello, World!")
-            Button(action: {
-                print("TESTE")
-            }) {
-                 Text("Botão")
+        VStack {
+            VStack(alignment: .leading) {
+                Text("Primeira atividade")
+                    .foregroundColor(Color(red: 0.98, green: 0.46, blue: 0.41, opacity: 1.0))
+                    .kerning(1.2)
+                    .fontWeight(.light)
+                    .font(.largeTitle)
+                
+                Text("Gráfico de barras")
+                    .italic()
+                    .font(.body)
+                    .fontWeight(.light)
+                    .foregroundColor(Color.gray)
+                    
             }
-        
+            
+            Spacer()
+            
+            VStack {
+                Button(
+                    action: {
+                        print("TESTE")
+                    },
+                    
+                    label: {
+                        HStack {
+                            Image(systemName: "chart.bar.fill")
+                            Text("Chart")
+                        }
+                        .padding(15.0)
+                        .foregroundColor(Color.white)
+                        .background(Color(red: 0.98, green: 0.46, blue: 0.41))
+                        .cornerRadius(8.0)
+                    }
+                )
+            }
+            
         }
+        
         
     }
 }
