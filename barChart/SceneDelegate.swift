@@ -2,8 +2,8 @@
 //  SceneDelegate.swift
 //  barChart
 //
-//  Created by Italo Boss on 24/02/20.
-//  Copyright © 2020 Italo Boss. All rights reserved.
+//  Created by Karina Paula on 24/02/20.
+//  Copyright © 2020 Karina Paula. All rights reserved.
 //
 
 import UIKit

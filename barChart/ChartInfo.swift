@@ -3,7 +3,7 @@
 //  barChart
 //
 //  Created by Karina Paula on 24/02/2020.
-//  Copyright © 2020 Italo Boss. All rights reserved.
+//  Copyright © 2020 Karina Paula. All rights reserved.
 //
 
 import Foundation
