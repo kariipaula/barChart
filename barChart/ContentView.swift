@@ -59,31 +59,24 @@ struct BarChart: View {
                 Spacer()
             }
             
-            Spacer()
             
-            VStack {
-                Button(
-                    action: {
-                        print("TESTE")
-                    },
-                    
-                    label: {
-                        HStack {
-                            Image(systemName: "chart.bar.fill")
-                            Text("Chart")
-                        }
-                        .padding(15.0)
-                        .foregroundColor(Color.white)
-                        .background(Color(red: 0.98, green: 0.46, blue: 0.41))
-                        .cornerRadius(8.0)
+            HStack {
+                ForEach(2018..<2020) { year in
+                    VStack {
+                        Spacer()
+
+                        Rectangle()
+                          .fill(Color.green)
+                          .frame(width: 20, height: CGFloat(self.sumValues(year)) * 10.0)
+                        
+                        Text("\(year)")
                     }
-                )
+                }
             }
             Spacer()
 
-            
+
         }
-        
         
     }
 }
