@@ -21,7 +21,11 @@ struct BarChart: View {
         ChartInfo(value: 8.0, date: 2018),
         ChartInfo(value: 9.0, date: 2018),
         ChartInfo(value: 10.0, date: 2018),
-        ChartInfo(value: 11.0, date: 2019)
+        ChartInfo(value: 11.0, date: 2019),
+        ChartInfo(value: 12.0, date: 2020),
+        ChartInfo(value: 13.0, date: 2020),
+        ChartInfo(value: 14.0, date: 2020),
+        ChartInfo(value: 15.0, date: 2020)
     ]
     
     func sumValues(_ year: Int) -> Float {
@@ -48,34 +52,42 @@ struct BarChart: View {
                         .fontWeight(.light)
                         .font(.largeTitle)
                     
-                    Text("Gráfico de barras")
+                    Text("Gráfico de barras: Ano x Quantidade")
                         .italic()
                         .font(.body)
                         .fontWeight(.light)
                         .foregroundColor(Color.gray)
-                        
+                    
                 }
                 .padding(20)
                 Spacer()
+                
+                
+                
             }
             
             
             HStack {
-                ForEach(2018..<2020) { year in
+                ForEach(2018..<2021) { year in
                     VStack {
                         Spacer()
-
+                        Text("\(self.sumValues(year))")
+                            .font(.footnote)
+                            .rotationEffect(.degrees(-90))
+                            .offset(y: -35)
+                            .zIndex(1)
+                                                
                         Rectangle()
-                          .fill(Color.green)
-                          .frame(width: 20, height: CGFloat(self.sumValues(year)) * 10.0)
+                            .fill(Color(red: 0.98, green: 0.46, blue: 0.41, opacity: 1.0))
+                            .frame(width: 20, height: CGFloat(self.sumValues(year)) * 5.0)
                         
                         Text("\(year)")
                     }
                 }
             }
             Spacer()
-
-
+            
+            
         }
         
     }
